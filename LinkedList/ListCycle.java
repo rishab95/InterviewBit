@@ -14,13 +14,14 @@ Input :
 
 Return the node corresponding to node 3.
 
- * Definition for singly-linked list.
- * class ListNode {
- *     public int val;
- *     public ListNode next;
- *     ListNode(int x) { val = x; next = null; }
- * }
- */
+Definition for singly-linked list.
+**/
+public class ListNode {
+    public int val;
+    public ListNode next;
+    ListNode(int x) { val = x; next = null; }
+}
+
 public class Solution {
     public ListNode detectCycle(ListNode A) {
         ListNode slow = A;
@@ -36,7 +37,7 @@ public class Solution {
         }
         if(slow == null || fast == null)
             return null;
-        ListNode* curr = A;
+        ListNode curr = A;
         while(curr != slow){
             curr = curr.next;
             slow = slow.next;
